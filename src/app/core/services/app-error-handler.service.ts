@@ -23,7 +23,7 @@ export class AppErrorHandler extends ErrorHandler {
 
     const notifier = this.injector.get(SnackBarService);
     let message: string;
-    
+
     // Server Error : Client Error
     message = (error instanceof HttpErrorResponse) ? error.message : serializeError(error).message;
 
