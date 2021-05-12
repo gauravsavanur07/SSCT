@@ -259,7 +259,3 @@ export class PurchaseContractService {
 
 
 }
-
-
-
-

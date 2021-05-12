@@ -5,7 +5,7 @@
 
   <mat-card-content>
     <section fxLayout="row" fxLayoutAlign="start center">
-     
+
       <h3 class="mat-h3" fxFlex="38" fxFlexOffset="2">Contract Status:</h3>
       <mat-chip fxFlex [selected]="true" [color]="statusColors[contract.state].color">{{
         enumToString(statusColors[contract.state].state)
@@ -38,8 +38,8 @@
           <span>{{ contract.description }}</span>
         </mat-list-item>
 
-        <!-- 
-          Commented out due to Privacy reasons to protect sensitve user data 
+        <!--
+          Commented out due to Privacy reasons to protect sensitve user data
         <mat-list-item>
           <h3 class="mat-h3">Contract Address</h3>
           <span>{{ contract.contractAddress }}</span>
@@ -101,11 +101,11 @@
       <button mat-raised-button color="warn" *ngIf="canBuy" [disabled]="!(buyerConfirmPrice.valid && buyerConfirmPrice.dirty)" (click)="buy.emit(buyerConfirmPrice.value)">
         Producer Execute Purchase</button>
       <button mat-raised-button color="accent" *ngIf="canDelivery" (click)="delivery.emit()">
-        Supplier Confirm Delivery</button> 
+        Supplier Confirm Delivery</button>
       <button mat-raised-button color="primary" matTooltip="Seller click to receive escrow" matTooltipPosition="above" *ngIf="canReleaseEscrow" (click)="releaseEscrow.emit()">
         Supplier Receive Escrow <mat-icon>local_bar</mat-icon>
       </button>
-     
+
 
     </section>
     <mat-card-footer>
@@ -125,7 +125,7 @@
 
 
 
-<!-- 
+<!--
   <p>Debug purchase contract details: {{ contract | json }}</p>
   <p>IPFS image: {{ image }}</p>
   -->
