@@ -90,8 +90,8 @@ app.get("/load", function (req, res) {
     db.get(username, { asBuffer: false }, function (err, value) {
       if (err) {
         // console.log('user not found:'+username); //in the real world you
-        // should leak that fact that a user is or is not a customer a unique and
-        // stable set of values for unregistered users.')
+        // should leak that fact that a user is or is not a customer a unique
+        // and stable set of values for unregistered users.')
         return res.sendStatus(204); // https://stackoverflow.com/a/11760249/329496
       } else {
         res.setHeader("Content-Type", "application/json");
@@ -115,8 +115,8 @@ app.post("/challenge", urlencodedParser, function (req, res) {
     db.get(username, { asBuffer: false }, function (err, value) {
       if (err) {
         // console.log('user not found:'+username); //in the real world you
-        // should leak that fact that a user is or is not a customer a unique and
-        // stable set of values for unregistered users.')
+        // should leak that fact that a user is or is not a customer a unique
+        // and stable set of values for unregistered users.')
         return res.sendStatus(204); // https://stackoverflow.com/a/11760249/329496
       } else {
         res.setHeader("Content-Type", "application/json");
@@ -169,8 +169,8 @@ app.post("/register", urlencodedParser, function (req, res) {
     db.get(username, { asBuffer: false }, function (err, value) {
       if (err) {
         // console.log('user not found:'+username); //in the real world you
-        // should leak that fact that a user is or is not a customer a unique and
-        // stable set of values for unregistered users.')
+        // should leak that fact that a user is or is not a customer a unique
+        // and stable set of values for unregistered users.')
         return res.sendStatus(204); // https://stackoverflow.com/a/11760249/329496
       } else {
         res.setHeader("Content-Type", "application/json");
